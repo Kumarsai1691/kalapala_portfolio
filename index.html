@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthik K - Portfolio</title>
+    <style>
+        /* Google Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+        /* Reset and dark theme setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background: #121212;
+            overflow-x: hidden;
+        }
+
+        /* Parallax background with gradient */
+        .parallax {
+            background-image: url('https://images.unsplash.com/photo-1545235613-6d62b185adb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .parallax-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Header text with neon effect */
+        header {
+            position: relative;
+            text-align: center;
+            z-index: 2;
+        }
+        header h1 {
+            font-size: 4em;
+            color: #39FF14; /* Neon green */
+            text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.5em;
+            color: #FFD700;
+            margin-top: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #1e1e1e;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #FFF;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        nav a::after {
+            content: "";
+            width: 0;
+            height: 2px;
+            background: #39FF14;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Section styling with neon border */
+        .content-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            border: 2px solid #39FF14;
+            box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .section-title {
+            font-size: 1.8em;
+            color: #39FF14;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title i {
+            margin-right: 10px;
+            color: #FFD700;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e1e1e;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        /* Social Media and theme toggle buttons */
+        .social-media a, .toggle-theme {
+            color: #39FF14;
+            font-size: 1.5em;
+            margin: 5px;
+            transition: color 0.3s;
+        }
+        .social-media a:hover, .toggle-theme:hover {
+            color: #FFD700;
+        }
+        .social-media {
+            position: fixed;
+            top: 50%;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(-50%);
+        }
+        .toggle-theme {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Parallax Background -->
+    <div class="parallax">
+        <div class="parallax-overlay"></div>
+        <header>
+            <h1>Karthik K</h1>
+            <p>Computer Science Student at SRM University, Chennai</p>
+        </header>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#contact">Contact</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#languages">Languages</a>
+        <a href="#projects">Projects</a>
+    </nav>
+
+    <!-- Main Content Sections -->
+    <div class="content-section" id="contact">
+        <h2 class="section-title"><i class="fas fa-phone"></i> Contact Me</h2>
+        <p>Phone: 9391883630</p>
+        <p>Email: karthikk8385@gmail.com</p>
+        <p>Location: Vijayawada, Andhra Pradesh</p>
+    </div>
+
+    <div class="content-section" id="skills">
+        <h2 class="section-title"><i class="fas fa-laptop-code"></i> Skills</h2>
+        <p>Programming Languages: C, Java, C++</p>
+        <p>Certifications: NPTEL, Udemy Courses</p>
+    </div>
+
+    <div class="content-section" id="education">
+        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+        <p>High School: Happy Valley International School, Vijayawada</p>
+        <p>University: SRM University, Chennai (2023-2027)</p>
+    </div>
+
+    <div class="content-section" id="languages">
+        <h2 class="section-title"><i class="fas fa-language"></i> Languages</h2>
+        <p>Native Telugu, Advanced English, Intermediate Tamil</p>
+    </div>
+
+    <div class="content-section" id="projects">
+        <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
+        <p>1. Portfolio Website using HTML, CSS, and JavaScript.</p>
+        <p>2. Library Management System in C++.</p>
+        <p>3. COVID-19 Data Analysis using Python and Pandas.</p>
+    </div>
+
+    <!-- Social Media and Theme Toggle -->
+    <div class="social-media">
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+    <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Karthik K. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for scroll animation and theme toggle -->
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Scroll animation
+        const sections = document.querySelectorAll('.content-section');
+        window.addEventListener('scroll', () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight - 50) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
